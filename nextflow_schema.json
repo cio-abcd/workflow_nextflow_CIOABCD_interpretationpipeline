@@ -321,12 +321,12 @@
                 },
                 "min_af": {
                     "type": "number",
-                    "default": 0.0,
+                    "default": 0,
                     "description": "Minimal allele frequency cutoff for TMB calculation"
                 },
                 "max_af": {
                     "type": "number",
-                    "default": 1.0,
+                    "default": 1,
                     "description": "Maximal allele frequency cutoff for TMB calculation"
                 },
                 "min_cov": {
@@ -352,6 +352,14 @@
                     "type": "integer",
                     "default": 1000000,
                     "description": "Expected panelsize threshold which should be surpassed to calculate TMB"
+                },
+                "prefilter_tmb": {
+                    "type": "string",
+                    "description": "Define if TMB should only be calculated on provided BED file regions"
+                },
+                "consequence_tmb": {
+                    "type": "string",
+                    "description": "Define VEP consequences which should be considered during TMB calculation"
                 }
             }
         },
